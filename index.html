@@ -1,292 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Cyber Risk Assessment | Cyber Hound Security</title>
+  <title>Free Cyber Risk Check</title>
 
-  <meta name="description" content="Get a free cyber risk assessment from Cyber Hound Security. Identify vulnerabilities before attackers do." />
-
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 
   <style>
-    :root {
-      --bg-dark: #0b0b0b;
-      --bg-card: #141414;
-      --red: #e10600;
-      --red-dark: #b80500;
-      --text-light: #f5f5f5;
-      --text-muted: #b3b3b3;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 60px;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    header span {
-      font-size: 1.2rem;
-      font-weight: 800;
-      letter-spacing: 1px;
+      background: #f4f6f8;
+      color: #1f2933;
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
-      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 4rem 1rem;
     }
 
-    h1 {
-      font-size: 2.6rem;
-      line-height: 1.15;
-      margin-bottom: 20px;
+    .hero img.logo {
+      max-width: 320px;
+      margin-bottom: 2rem;
     }
 
-    .subhead {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 30px;
-    }
-
-    ul {
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 16px 34px;
-      background: var(--red);
-      color: #fff;
+    .hero h1 {
       font-weight: 700;
-      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+
+    .hero p.lead {
+      color: #e5e7eb;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
+
+    .primary-button {
+      background: #dc2626;
       border-radius: 6px;
-      transition: background 0.2s ease;
+      font-weight: 600;
     }
 
-    .cta-btn:hover {
-      background: var(--red-dark);
+    .primary-button:hover {
+      background: #b91c1c;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    section {
-      margin-top: 100px;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
+    .section {
+      padding: 4rem 0;
     }
 
     .card {
-      background: var(--bg-card);
-      padding: 25px;
+      background: white;
+      padding: 2rem;
       border-radius: 10px;
-      border-left: 4px solid var(--red);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      height: 100%;
     }
 
     .form-box {
-      background: var(--bg-card);
-      padding: 40px;
+      background: #ffffff;
+      padding: 2.5rem;
       border-radius: 12px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 16px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      background: var(--red);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: var(--red-dark);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
 
     footer {
+      padding: 2rem 0;
       text-align: center;
-      margin-top: 120px;
-      color: var(--text-muted);
+      color: #6b7280;
       font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
+  <!-- HERO -->
+  <div class="hero text-center">
+    <div class="row column">
+      <img src="assets/logo.png" alt="Cyber Hound Logo" class="logo" />
 
-    <!-- HEADER -->
-    <header>
-      <img src="assets/logo.png" alt="Cyber Hound Security Logo" />
-      <span>CYBER HOUND SECURITY</span>
-    </header>
+      <h1>Know Where Your Business Is Exposed</h1>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <h1>Find Out How Hackers Would Break Into Your Business — Before They Do</h1>
-        <p class="subhead">
-          Get a <strong>free cyber risk assessment</strong> and uncover security gaps attackers exploit every day.
-        </p>
+      <p class="lead">
+        Most businesses don’t realize what’s at risk until something breaks.
+        This free check helps you spot problems early — before they turn into
+        downtime, lost money, or stress.
+      </p>
 
-        <ul>
-          <li>Identify hidden vulnerabilities</li>
-          <li>Understand ransomware and breach risks</li>
-          <li>Know what to fix first — no jargon</li>
-          <li>Protect your business before it’s too late</li>
-        </ul>
+      <a href="#form" class="button large primary-button">
+        Get the Free Risk Check
+      </a>
+    </div>
+  </div>
 
-        <a href="#form" class="cta-btn">Get My Free Risk Assessment</a>
+  <!-- SECTION: WHY -->
+  <div class="section">
+    <div class="row">
+      <div class="medium-6 columns">
+        <img class="thumbnail"
+          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
+          alt="Cyber security screen">
       </div>
 
-      <!-- STOCK IMAGE -->
-      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity dashboard" />
+      <div class="medium-6 columns">
+        <h2>Why this matters</h2>
+        <p>
+          Attacks don’t usually start with movie-level hackers.
+          They start with small gaps — old settings, weak access,
+          or things that were never checked.
+        </p>
+        <p>
+          The problem is simple: most owners don’t know where those gaps are.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: WHAT YOU GET -->
+  <div class="section" style="background:#eef2f7;">
+    <div class="row text-center">
+      <h2>What you’ll get</h2>
     </div>
 
-    <!-- WHY -->
-    <section>
-      <h2>Why Cyber Attacks Hit Small Businesses</h2>
-
-      <div class="cards">
+    <div class="row small-up-1 medium-up-3">
+      <div class="column">
         <div class="card">
-          <strong>Weak Defenses</strong>
-          <p>Attackers target businesses that lack visibility into their security gaps.</p>
-        </div>
-        <div class="card">
-          <strong>High Downtime Costs</strong>
-          <p>Ransomware can shut down operations for days or weeks.</p>
-        </div>
-        <div class="card">
-          <strong>No Early Warning</strong>
-          <p>Most businesses don’t know they’re compromised until damage is done.</p>
+          <h4>A clear look at risk</h4>
+          <p>
+            We walk through where issues usually show up and
+            what applies to your business.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- OFFER -->
-    <section>
-      <h2>What You’ll Get in Your Free Assessment</h2>
-
-      <div class="cards">
+      <div class="column">
         <div class="card">
-          <p>✔ Review of your cybersecurity posture</p>
-        </div>
-        <div class="card">
-          <p>✔ Top 3–5 risk areas explained clearly</p>
-        </div>
-        <div class="card">
-          <p>✔ Actionable recommendations you can use immediately</p>
+          <h4>No tech talk</h4>
+          <p>
+            You’ll hear things explained like a normal conversation —
+            not a sales pitch or a lecture.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- FORM -->
-    <section id="form">
-      <div class="form-box">
-        <h2>Request Your Free Cyber Risk Assessment</h2>
-
-        <form 
-          action="https://formspree.io/f/xaqbdooj" 
-          method="POST"
-        >
-
-          <input type="hidden" name="_redirect" value="https://calendly.com/randy-cyberhoundsec-gbds/30min" />
-          <input type="hidden" name="_subject" value="New Cyber Risk Assessment Lead" />
-
-          <input type="text" name="full_name" placeholder="Full Name" required />
-          <input type="text" name="business_name" placeholder="Business Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
-          <input type="tel" name="phone" placeholder="Phone Number" required />
-
-          <select name="industry" required>
-            <option value="">Industry</option>
-            <option>Healthcare</option>
-            <option>Finance</option>
-            <option>Professional Services</option>
-            <option>Manufacturing</option>
-            <option>Other</option>
-          </select>
-
-          <select name="employees" required>
-            <option value="">Number of Employees</option>
-            <option>1–10</option>
-            <option>11–50</option>
-            <option>51–250</option>
-            <option>250+</option>
-          </select>
-
-          <button type="submit">Continue to Scheduling</button>
-        </form>
+      <div class="column">
+        <div class="card">
+          <h4>Next steps</h4>
+          <p>
+            You’ll leave knowing what to fix first
+            and what can wait.
+          </p>
+        </div>
       </div>
-    </section>
-
-    <footer>
-      © Cyber Hound Security • No obligation • No scare tactics • Real answers
-    </footer>
-
+    </div>
   </div>
+
+  <!-- SECTION: VISUAL GRID -->
+  <div class="section">
+    <div class="row small-up-2 medium-up-4">
+      <div class="column">
+        <img class="thumbnail"
+          src="https://images.unsplash.com/photo-1510511450819-1c8e7e8b9c85?auto=format&fit=crop&w=600&q=80">
+      </div>
+      <div class="column">
+        <img class="thumbnail"
+          src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80">
+      </div>
+      <div class="column">
+        <img class="thumbnail"
+          src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=600&q=80">
+      </div>
+      <div class="column">
+        <img class="thumbnail"
+          src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379?auto=format&fit=crop&w=600&q=80">
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="section" id="form" style="background:#0f172a;">
+    <div class="row">
+      <div class="medium-8 medium-centered columns">
+        <div class="form-box">
+          <h3 class="text-center">Get the Free Risk Check</h3>
+
+          <form
+            action="https://formspree.io/f/xaqbdooj"
+            method="POST"
+          >
+            <input type="hidden" name="_redirect"
+              value="https://calendly.com/randy-cyberhoundsec-gbds/30min">
+            <input type="hidden" name="_subject"
+              value="New Risk Check Request">
+
+            <label>
+              Full Name
+              <input type="text" name="name" required>
+            </label>
+
+            <label>
+              Business Name
+              <input type="text" name="business" required>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="phone" required>
+            </label>
+
+            <label>
+              Company Size
+              <select name="size" required>
+                <option value="">Select one</option>
+                <option>1–10</option>
+                <option>11–50</option>
+                <option>51–250</option>
+                <option>250+</option>
+              </select>
+            </label>
+
+            <button type="submit"
+              class="button expanded primary-button">
+              Continue to Scheduling
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    No pressure • No scare tactics • Just clarity
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 
 </body>
 </html>
