@@ -1,75 +1,174 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free Cyber Risk Check</title>
 
-  <link rel="stylesheet"
-    href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <meta name="description" content="A simple, free cyber risk check to help business owners understand where they may be exposed." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #dc2626;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background: #f4f6f8;
-      color: #1f2933;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* HERO */
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      padding: 4rem 1rem;
+      text-align: center;
+      padding: 80px 20px 60px;
     }
 
-    .hero img.logo {
-      max-width: 320px;
-      margin-bottom: 2rem;
+    .hero img {
+      max-width: 360px;
+      margin-bottom: 40px;
     }
 
     .hero h1 {
+      font-size: 2.6rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
     }
 
-    .hero p.lead {
-      color: #e5e7eb;
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
       max-width: 720px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 40px;
     }
 
-    .primary-button {
-      background: #dc2626;
-      border-radius: 6px;
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 8px;
       font-weight: 600;
+      text-decoration: none;
+      font-size: 1.05rem;
     }
 
-    .primary-button:hover {
-      background: #b91c1c;
+    .cta:hover {
+      opacity: 0.9;
     }
 
-    .section {
-      padding: 4rem 0;
+    /* IMAGE */
+    .hero-image {
+      margin: 60px auto 0;
+      max-width: 900px;
     }
 
-    .card {
+    .hero-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    /* EXPLAIN */
+    .explain {
+      max-width: 800px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .explain h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .explain p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* FORM */
+    .form-section {
       background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      height: 100%;
+      border-top: 1px solid var(--border);
+      padding: 80px 20px;
     }
 
     .form-box {
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .form-box h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      padding: 16px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
     }
 
     footer {
-      padding: 2rem 0;
       text-align: center;
-      color: #6b7280;
+      padding: 40px 20px;
       font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero img {
+        max-width: 260px;
+      }
     }
   </style>
 </head>
@@ -77,174 +176,78 @@
 <body>
 
   <!-- HERO -->
-  <div class="hero text-center">
-    <div class="row column">
-      <img src="assets/logo.png" alt="Cyber Hound Logo" class="logo" />
+  <section class="hero">
+    <img src="assets/logo.png" alt="Logo">
 
-      <h1>Know Where Your Business Is Exposed</h1>
+    <h1>Know Where Your Business Is Exposed</h1>
 
-      <p class="lead">
-        Most businesses don’t realize what’s at risk until something breaks.
-        This free check helps you spot problems early — before they turn into
-        downtime, lost money, or stress.
-      </p>
+    <p>
+      Most business owners don’t find out they have security problems
+      until something goes wrong. This free check helps you understand
+      what’s worth paying attention to — and what isn’t.
+    </p>
 
-      <a href="#form" class="button large primary-button">
-        Get the Free Risk Check
-      </a>
+    <a href="#form" class="cta">Get the Free Risk Check</a>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80"
+           alt="Cybersecurity dashboard">
     </div>
-  </div>
+  </section>
 
-  <!-- SECTION: WHY -->
-  <div class="section">
-    <div class="row">
-      <div class="medium-6 columns">
-        <img class="thumbnail"
-          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
-          alt="Cyber security screen">
-      </div>
-
-      <div class="medium-6 columns">
-        <h2>Why this matters</h2>
-        <p>
-          Attacks don’t usually start with movie-level hackers.
-          They start with small gaps — old settings, weak access,
-          or things that were never checked.
-        </p>
-        <p>
-          The problem is simple: most owners don’t know where those gaps are.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION: WHAT YOU GET -->
-  <div class="section" style="background:#eef2f7;">
-    <div class="row text-center">
-      <h2>What you’ll get</h2>
-    </div>
-
-    <div class="row small-up-1 medium-up-3">
-      <div class="column">
-        <div class="card">
-          <h4>A clear look at risk</h4>
-          <p>
-            We walk through where issues usually show up and
-            what applies to your business.
-          </p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <h4>No tech talk</h4>
-          <p>
-            You’ll hear things explained like a normal conversation —
-            not a sales pitch or a lecture.
-          </p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <h4>Next steps</h4>
-          <p>
-            You’ll leave knowing what to fix first
-            and what can wait.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION: VISUAL GRID -->
-  <div class="section">
-    <div class="row small-up-2 medium-up-4">
-      <div class="column">
-        <img class="thumbnail"
-          src="https://images.unsplash.com/photo-1510511450819-1c8e7e8b9c85?auto=format&fit=crop&w=600&q=80">
-      </div>
-      <div class="column">
-        <img class="thumbnail"
-          src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80">
-      </div>
-      <div class="column">
-        <img class="thumbnail"
-          src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=600&q=80">
-      </div>
-      <div class="column">
-        <img class="thumbnail"
-          src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379?auto=format&fit=crop&w=600&q=80">
-      </div>
-    </div>
-  </div>
+  <!-- EXPLAIN -->
+  <section class="explain">
+    <h2>This isn’t technical or salesy</h2>
+    <p>
+      We simply walk through the common places where problems show up
+      in small and mid-sized businesses. You’ll leave with a clearer
+      picture of where you stand and what should be fixed first.
+    </p>
+  </section>
 
   <!-- FORM -->
-  <div class="section" id="form" style="background:#0f172a;">
-    <div class="row">
-      <div class="medium-8 medium-centered columns">
-        <div class="form-box">
-          <h3 class="text-center">Get the Free Risk Check</h3>
+  <section class="form-section" id="form">
+    <div class="form-box">
+      <h3>Start the Free Risk Check</h3>
 
-          <form
-            action="https://formspree.io/f/xaqbdooj"
-            method="POST"
-          >
-            <input type="hidden" name="_redirect"
-              value="https://calendly.com/randy-cyberhoundsec-gbds/30min">
-            <input type="hidden" name="_subject"
-              value="New Risk Check Request">
+      <form
+        action="https://formspree.io/f/xaqbdooj"
+        method="POST"
+      >
+        <input type="hidden" name="_redirect"
+          value="https://calendly.com/randy-cyberhoundsec-gbds/30min">
+        <input type="hidden" name="_subject"
+          value="New Risk Check Request">
 
-            <label>
-              Full Name
-              <input type="text" name="name" required>
-            </label>
+        <label>Full Name</label>
+        <input type="text" name="name" required>
 
-            <label>
-              Business Name
-              <input type="text" name="business" required>
-            </label>
+        <label>Business Name</label>
+        <input type="text" name="business" required>
 
-            <label>
-              Email
-              <input type="email" name="email" required>
-            </label>
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-            <label>
-              Phone
-              <input type="tel" name="phone" required>
-            </label>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
 
-            <label>
-              Company Size
-              <select name="size" required>
-                <option value="">Select one</option>
-                <option>1–10</option>
-                <option>11–50</option>
-                <option>51–250</option>
-                <option>250+</option>
-              </select>
-            </label>
+        <label>Company Size</label>
+        <select name="size" required>
+          <option value="">Select one</option>
+          <option>1–10</option>
+          <option>11–50</option>
+          <option>51–250</option>
+          <option>250+</option>
+        </select>
 
-            <button type="submit"
-              class="button expanded primary-button">
-              Continue to Scheduling
-            </button>
-          </form>
-        </div>
-      </div>
+        <button type="submit">Continue to Scheduling</button>
+      </form>
     </div>
-  </div>
+  </section>
 
   <footer>
     No pressure • No scare tactics • Just clarity
   </footer>
-
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
 
 </body>
 </html>
